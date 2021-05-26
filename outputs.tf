@@ -18,6 +18,6 @@ output "vault_lb_arn" {
   value = module.vault_cluster.vault_lb_arn
 }    
 
-output "vault_vault_tg_arn" {
+output "vault_tg_arn" {
   value = module.vault_cluster.vault_tg_arn
 }    
