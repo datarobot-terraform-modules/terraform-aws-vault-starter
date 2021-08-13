@@ -68,5 +68,6 @@ variable "lb_subnets" {
 }
 
 variable "instance_subnets" {
+  type        = list(string)
   description = "Subnets to place Vault Instances in"
 }
