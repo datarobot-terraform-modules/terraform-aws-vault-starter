@@ -66,3 +66,7 @@ variable "lambda_secondary_subnet_cidr" {
 variable "lb_subnets" {
   description = "Subnets to place LB in"
 }
+
+variable "instance_subnets" {
+  description = "Subnets to place Vault Instances in"
+}
