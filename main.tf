@@ -9,10 +9,12 @@ module "vault_cluster" {
   elb_internal                 = var.elb_internal
   key_name                     = var.key_name
   instance_type                = var.instance_type
+  instnace_subnets             = var.instance_subnets
   vault_nodes                  = var.vault_nodes
   vault_cluster_version        = var.vault_cluster_version
   lb_subnets                   = var.lb_subnets
   nat_gateway_subnet_cidr      = var.nat_gateway_subnet_cidr
   lambda_primary_subnet_cidr   = var.lambda_primary_subnet_cidr
   lambda_secondary_subnet_cidr = var.lambda_secondary_subnet_cidr
+
 }

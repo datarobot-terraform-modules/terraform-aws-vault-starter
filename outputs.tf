@@ -8,8 +8,8 @@ output "vault_security_group" {
 
 output "vault_kms_key" {
   value = module.vault_cluster.vault_kms_key
-} 
-  
+}
+
 output "vault_kms_alias" {
   value = module.vault_cluster.vault_kms_alias
-}    
+}
