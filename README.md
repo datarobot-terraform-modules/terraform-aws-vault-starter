@@ -41,6 +41,7 @@ module "vault-oss" {
   key_name              = "<your SSH key name>"
   elb_internal          = false
   lb_subnets            = ["<subnet1>","<subnet2>"]
+  instance_subnets      = ["<subnet1>","<subnet2>"]
 }
 ```
 
