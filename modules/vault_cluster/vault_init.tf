@@ -154,7 +154,7 @@ resource "aws_lambda_function" "vault_join_init" {
 }
 
 data "aws_lambda_invocation" "vault_join_init" {
-  function_name = "${aws_lambda_function.vault_join_init.function_name}"
+  function_name = aws_lambda_function.vault_join_init.function_name
 
   input = <<JSON
 {
