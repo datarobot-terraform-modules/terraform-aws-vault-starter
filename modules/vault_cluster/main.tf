@@ -20,10 +20,6 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-data "aws_subnet_ids" "default" {
-  vpc_id = data.aws_vpc.vault_vpc.id
-}
-
 data "aws_availability_zones" "available" {
   state = "available"
 }
@@ -93,7 +89,7 @@ resource "aws_autoscaling_group" "vault" {
   wait_for_capacity_timeout = "900s"
   health_check_grace_period = 300
   health_check_type         = "EC2"
-  vpc_zone_identifier       = var.instance_subnets ? var.instance_subnets : data.aws_subnet_ids.default.ids
+  vpc_zone_identifier       = var.instance_subnets
   target_group_arns         = [aws_lb_target_group.vault.arn]
 
   tags = [

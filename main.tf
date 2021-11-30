@@ -9,6 +9,7 @@ module "vault_cluster" {
   elb_internal                 = var.elb_internal
   key_name                     = var.key_name
   instance_type                = var.instance_type
+  instance_subnets             = var.instance_subnets
   vault_nodes                  = var.vault_nodes
   vault_cluster_version        = var.vault_cluster_version
   lb_subnets                   = var.lb_subnets
